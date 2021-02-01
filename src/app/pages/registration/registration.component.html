@@ -1,0 +1,18 @@
+<p>registration works!</p>
+<div class="container">
+  <h2>Form Data</h2>
+
+
+    <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+
+        <input name="email" ngModel  placeholder="First Name">
+
+         <input name="password" ngModel  placeholder="Surname">
+
+       <button type="submit" >Register</button>
+
+       
+<button [routerLink]="['/login']"> login</button>
+
+      </form>
+  </div>
