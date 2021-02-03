@@ -1,6 +1,6 @@
 <div id="login-box">
   <div class="left">
-    <h1>Sign up</h1>
+    <h1>Sign In</h1>
 
      <form #userLogForm="ngForm" (ngSubmit)="LoginUser(userLogForm)">
 
@@ -10,7 +10,7 @@
     
      
 
-    <input type="submit" name="signup_submit" value="Sign me up" />
+    <input type="submit" name="signup_submit" value="Sign me In" />
 
      </form>
     
@@ -19,9 +19,9 @@
   <div class="right">
     <span class="loginwith">Sign in with<br />social network</span>
     
+    <button [routerLink]="['/register']" class="social-signin twitter">Register With Email</button>
     <button class="social-signin facebook">Log in with facebook</button>
-    <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google+</button>
+    <button (click)="LoginGoogle()" class="social-signin google">Log in with Google</button>
   </div>
   <div class="or">OR</div>
 </div>

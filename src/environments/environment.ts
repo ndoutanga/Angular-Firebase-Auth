@@ -7,13 +7,14 @@ import * as firebase from "firebase/app";
 export const environment = {
   production: false,
   firebase : {
-        apiKey: "AIzaSyC5adVTXAYtisM_BLrJqVcJXq8B1AiLkZw",
+    apiKey: "AIzaSyC5adVTXAYtisM_BLrJqVcJXq8B1AiLkZw",
     authDomain: "individualtask-63fc5.firebaseapp.com",
     projectId: "individualtask-63fc5",
     storageBucket: "individualtask-63fc5.appspot.com",
     messagingSenderId: "744052977323",
     appId: "1:744052977323:web:372c478b86605ef0a591ee",
     measurementId: "G-RQYLWDHQ9Q"
+
   }
 
 };

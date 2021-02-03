@@ -1,18 +1,29 @@
-<p>registration works!</p>
-<div class="container">
-  <h2>Form Data</h2>
 
 
-    <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
 
-        <input name="email" ngModel  placeholder="First Name">
+<div id="login-box">
+  <div class="left">
+    <h1>Sign Up</h1>
 
-         <input name="password" ngModel  placeholder="Surname">
+     <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
 
-       <button type="submit" >Register</button>
+    <input type="text" name="email"  ngModel email="ngModel">
 
-       
-<button [routerLink]="['/login']"> login</button>
+    <input type="password" name="password"  ngModel email="password">
+    
+     
 
-      </form>
+    <input type="submit" name="signup_submit" value="Sign me Up" />
+
+     </form>
+    
   </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    <button [routerLink]="['/login']" class="social-signin twitter">Log In With Email</button>
+    <button class="social-signin facebook">Log in with Facebook</button>
+    <button (click)="LoginGoogle()" class="social-signin google">Log in with Google</button>
+  </div>
+  <div class="or">OR</div>
+</div>

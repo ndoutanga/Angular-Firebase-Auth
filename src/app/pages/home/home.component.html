@@ -3,8 +3,5 @@
 
   <h5>list person</h5>
 
-  <ul>
-    <li *ngFor="let item of person">
-      <p> {{item.payload.doc.data().surname}} | {{item.payload.doc.data().name}}</p>
-    </li>
-  </ul>
+  <button (click)="LogOut()">logout</button>
+

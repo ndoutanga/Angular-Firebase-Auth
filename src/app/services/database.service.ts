@@ -6,6 +6,12 @@ import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 //import { auth } from 'firebase';
 
+import firebase from 'firebase/app';
+import 'firebase/auth';
+//import { user } from './user';
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -52,6 +58,30 @@ getusers(){
   return this._fire.collection("users");
 
 }
+
+
+
+   loginWithGoogle(){
+    this.fireauth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
+     res=>{
+       console.log('succesful');
+       this.router.navigate(['/home']);
+     }
+   ).catch(err => {
+     console.log('error occured', err.message);
+   })
+  }
+
+  logout(){ 
+    this.fireauth.signOut().then ( () => {
+      console.log('succesfull logout')
+      this.router.navigate(['/login']);
+    }).catch(err => {
+      console.log('error occured', err.message)
+    })
+  }
+
+
   
 
 }

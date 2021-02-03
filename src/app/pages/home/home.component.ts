@@ -23,4 +23,9 @@ export class HomeComponent implements OnInit {
 
   }
 
+
+  LogOut(){
+    this._data.logout();
+  }
+
 }

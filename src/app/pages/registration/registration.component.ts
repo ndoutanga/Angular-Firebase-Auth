@@ -16,14 +16,15 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+//[routerLink]="['/login']"
   
 createUser(userRegForm: { value: { email: string; password: any; }; }) {
-this._data.createUser(userRegForm.value);
-//createUser(userRegForm: any){
+this._data.createUser(userRegForm.value);}
 
-
-
+LoginGoogle(){
+  this._data.loginWithGoogle();
 }
+
+
 
 }

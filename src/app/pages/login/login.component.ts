@@ -23,4 +23,9 @@ LoginUser(userLogForm:  { value: { email: string; password: any; }; }) {
 this._data.LoginUser(userLogForm.value)
 
 }
+
+LoginGoogle(){
+  this._data.loginWithGoogle();
+}
+
 }
